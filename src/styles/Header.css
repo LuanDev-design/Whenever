@@ -1,0 +1,80 @@
+.custom-link {
+    color: black !important;
+    text-decoration: none !important;
+    margin-right: 2rem;
+    font-weight: bold !important;
+  }
+  
+  .custom-link:hover {
+    text-decoration: underline;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border: 1px solid #e5e7eb;
+    padding: 0.5rem 0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    min-width: 140px;
+  }
+  
+  .dropdown-item {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: black;
+    text-decoration: none;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #f3f4f6;
+  }
+  
+  /* NEW: show on hover */
+  .group:hover .dropdown-menu {
+    display: block;
+  }
+  .right-menu {
+    display: flex;
+    align-items: center;
+    gap: 3rem; /* Tăng khoảng cách giữa các item */
+  }
+  
+  .right-link {
+    text-decoration: none;
+    color: black !important;
+    text-transform: lowercase;
+    font-weight: 600;
+    position: relative;
+    font-size: 14px;
+  }
+  
+  .right-link:hover {
+    text-decoration: underline;
+  }
+  
+
+  .cart-count {
+    position: absolute;
+    top: 40%;
+    right: -22px; /* đẩy sang phải một chút */
+    transform: translateY(-50%); /* căn giữa theo chiều dọc */
+    background-color: black;
+    color: white;
+    font-size: 12px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+  }
+  
+.cart-link {
+    margin-right: 3rem; /* hoặc giá trị bạn muốn */
+    position: relative;
+  }
+  
