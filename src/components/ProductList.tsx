@@ -26,7 +26,30 @@ const products = [
     price: "480.000đ",
     image: "/images/p4.jpg",
   },
-  
+  {
+    id: 5,
+    name: "WHENEVER BASIC LOGO SS25 LONG SLEEVES T-SHIRT / BLACK",
+    price: "720.000đ",
+    image: "/images/p5.jpg",
+  },
+  {
+    id: 6,
+    name: "WHENEVER BASIC LOGO SS25 LONG SLEEVES T-SHIRT / WHITE",
+    price: "720.000đ",
+    image: "/images/p6.jpg",
+  },
+  {
+    id: 7,
+    name: "WHENEVER BASIC SWEATER / BLACK",
+    price: "780.000đ",
+    image: "/images/p7.jpg",
+  },
+  {
+    id: 8,
+    name: "WHENEVER BASIC SWEATER / PREMIUM GREY",
+    price: "780.000đ",
+    image: "/images/p8.jpg",
+  },
   
 ];
 
