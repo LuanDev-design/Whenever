@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "../styles/globals.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import { geistSans, geistMono } from "../fonts"; // 👉 dùng font cục bộ
+import { fontBody, fontHeading, geistMono } from "../fonts"
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,7 +15,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
+    <html lang="en" className={`${fontBody.variable} ${fontHeading.variable} ${geistMono.variable}`}>
       <body className="antialiased">
         <Header />
         {children}
