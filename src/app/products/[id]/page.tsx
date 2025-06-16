@@ -1,6 +1,9 @@
-import Image from "next/image";
+// File: src/app/products/[id]/page.tsx
 
-// Fake data
+import Image from "next/image";
+import { notFound } from "next/navigation";
+
+// Fake product data
 const products = [
   {
     id: 1,
@@ -25,15 +28,17 @@ const products = [
   },
 ];
 
-export default async function ProductDetail({
+// ✅ Next.js yêu cầu params là Promise
+export default async function ProductDetailPage({
   params,
 }: {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }) {
-  const product = products.find((p) => p.id === Number(params.id));
+  const resolvedParams = await params;
+  const product = products.find((p) => p.id === Number(resolvedParams.id));
 
   if (!product) {
-    return <div className="p-10 text-center text-red-500">Sản phẩm không tồn tại.</div>;
+    notFound();
   }
 
   return (
@@ -56,4 +61,11 @@ export default async function ProductDetail({
       </div>
     </div>
   );
+}
+
+// ✅ generateStaticParams bắt buộc để SSG hoạt động với [id]
+export async function generateStaticParams() {
+  return products.map((product) => ({
+    id: product.id.toString(),
+  }));
 }
