@@ -16,11 +16,12 @@ const ProductCard = ({ product }: { product: Product }) => {
         <Image
           src={product.image}
           alt={product.name}
-          layout="responsive"
           width={300}
           height={300}
           className={styles.image}
+          style={{ height: "auto", width: "100%", objectFit: "cover" }} // tương đương layout responsive
         />
+
       </div>
       <div className={styles.info}>
         <h3 className={styles.name}>{product.name}</h3>
