@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import '../styles/Footer.css';
+import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -52,22 +53,21 @@ export default function Footer() {
             {/* Cột 1 */}
             <div className="text-left">
               <ul><h4 className="font-semibold mb-2">THÔNG TIN</h4></ul>
-              <ul className="space-y-1 pl-0 list-none">
-                <li><Link href="/search" className="text-[#222222] hover:text-black transition-colors">Tìm kiếm</Link></li>
-                <li><Link href="/about" className="text-[#222222] hover:text-black transition-colors">Giới thiệu</Link></li>
-                <li><Link href="/return-policy" className="text-[#222222] hover:text-black transition-colors">Chính sách đổi trả</Link></li>
-                <li><Link href="/contact" className="text-[#222222] hover:text-black transition-colors">Liên hệ</Link></li>
+              <ul className="space-y-[15px] pl-0 list-none">
+                <li><Link href="/search" className="text-[#222222] hover:text-black transition-colors">Hoá đơn theo yêu cầu của khách hàng</Link></li>
+                <li><Link href="/about" className="text-[#222222] hover:text-black transition-colors">Chính sách đổi trả</Link></li>
+                <li><Link href="/return-policy" className="text-[#222222] hover:text-black transition-colors">Chính sách vận chuyển</Link></li>
+                <li><Link href="/contact" className="text-[#222222] hover:text-black transition-colors">Chính sách kiểm hàng</Link></li>
                 <li><Link href="/privacy" className="text-[#222222] hover:text-black transition-colors">Chính sách bảo mật</Link></li>
-                <li><Link href="/terms" className="text-[#222222] hover:text-black transition-colors">Điều khoản dịch vụ</Link></li>
-                <li><Link href="/invoice" className="text-[#222222] hover:text-black transition-colors">Customer Request Invoice</Link></li>
+                <li><Link href="/terms" className="text-[#222222] hover:text-black transition-colors">Chính sách thanh toán</Link></li>
               </ul>
             </div>
 
             {/* Cột 2 */}
             <div className="text-left">
               <ul><h4 className="font-semibold mb-2">THÔNG TIN</h4></ul>
-              <ul className="space-y-1 pl-0 list-none">
-                <li><Link href="/membership" className="text-[#222222] hover:text-black transition-colors">WHENEVER MEMBERSHIP POLICY</Link></li>
+              <ul className="space-y-[15px] pl-0 list-none">
+                <li><Link href="/membership" className="text-[#222222] hover:text-black transition-colors uppercase">Chính sách hội viên của WHENEVER</Link></li>
                 <li><Link href="/" className="text-[#222222] hover:text-black transition-colors">Trang chủ</Link></li>
                 <li><Link href="/products" className="text-[#222222] hover:text-black transition-colors">Sản phẩm</Link></li>
               </ul>
@@ -79,10 +79,41 @@ export default function Footer() {
             </div>
 
             {/* Cột 4: App Store */}
-            <div className="m-[9px]">
-              <Image src="/images/appstore.png" alt="App Store" width={97} height={29} />
-              <Image src="/images/playstore.png" alt="Google Play" width={97} height={29} />
+            <div className="m-[9px] text-sm leading-relaxed mr-[100px] space-y-[10px]">
+              {/* App download */}
+              <div className="flex gap-2 mb-[30px]">
+                <Image src="/images/appstore.png" alt="App Store" width={97} height={29} />
+                <Image src="/images/playstore.png" alt="Google Play" width={97} height={29} />
+              </div>
+
+              {/* Title */}
+              <h4 className="font-semibold mb-[20px] uppercase">Thông tin liên hệ</h4>
+
+              {/* Company info */}
+              <p>
+                CÔNG TY TNHH WHENEVER ATELIER<br />
+                GPKD SỐ 0318969533 CẤP NGÀY 27/05/2025 TẠI SỞ KẾ HOẠCH VÀ ĐẦU TƯ HỒ CHÍ MINH.
+              </p>
+
+              {/* Address */}
+              <div className="flex items-start gap-2 mt-3">
+                <FaMapMarkerAlt className="mt-1 text-[14px] mr-[10px]" />
+                <span>141/8 Bàn Cờ, Phường 3, Quận 3, Thành phố Hồ Chí Minh</span>
+              </div>
+
+              {/* Phone */}
+              <div className="flex items-center gap-2 mt-2">
+                <FaPhoneAlt className="text-[14px] mr-[10px]" />
+                <span>0335896867</span>
+              </div>
+
+              {/* Email */}
+              <div className="flex items-center gap-2 mt-2">
+                <FaEnvelope className="text-[14px] mr-[10px]" />
+                <span>whenever.atelier@gmail.com</span>
+              </div>
             </div>
+
           </div>
         </div>
 
